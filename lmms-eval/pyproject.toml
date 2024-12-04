@@ -1,0 +1,110 @@
+[tool.black]
+line-length = 240
+
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[tomli]>=6.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lmms_eval"
+version = "0.2.0.post1"
+authors = [
+    { name = "LMMMs-Lab Evaluation Team", email = "lmms_eval@outlook.com" },
+]
+description = "A framework for evaluating large multi-modality language models"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+    "accelerate>=0.21.0",
+    "black==24.1.0",
+    "datasets==2.21.0",
+    "evaluate>=0.4.0",
+    "httpx==0.24.0",
+    "jsonlines",
+    "numexpr",
+    "numpy==1.26.4",
+    "peft>=0.2.0",
+    "pybind11>=2.6.2",
+    "pytablewriter",
+    "rouge-score>=0.0.4",
+    "sacrebleu>=1.5.0",
+    "scikit-learn>=0.24.1",
+    "sqlitedict",
+    "torch>=2.1.0", # to enable sdpa mode for running 34B model on one 80GB GPU
+    "openai>=1.0.0",
+    "yt-dlp",
+    "google-generativeai",
+    "pycocoevalcap",
+    "tqdm-multiprocess",
+    "transformers>=4.37.2",
+    "transformers-stream-generator",
+    "zstandard",
+    "pillow",
+    "pyyaml",
+    "sympy",
+    "mpmath",
+    "Jinja2",
+    "openpyxl",
+    "loguru",
+    "Levenshtein",
+    "hf_transfer",
+    "tenacity==8.3.0",
+    "wandb==0.17.4",
+    "tiktoken",
+    "pre-commit",
+    "pydantic",
+    "packaging",
+    "decord",
+    "zss",
+    "pywsd",
+]
+
+[tool.setuptools.packages.find]
+include = ["lmms_eval*"]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "tests*",
+    "checkpoints*",
+    "project_checkpoints*",
+    "debug_checkpoints*",
+    "mlx_configs*",
+    "wandb*",
+    "notebooks*",
+    "logs*",
+]
+
+[tool.wheel]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "tests*",
+    "checkpoints*",
+    "project_checkpoints*",
+    "debug_checkpoints*",
+    "mlx_configs*",
+    "wandb*",
+    "notebooks*",
+    "logs*",
+]
+
+[project.scripts]
+lmms-eval = "lmms_eval.__main__:cli_evaluate"
+
+[project.urls]
+Homepage = "https://lmms-lab.github.io/lmms-eval-blog/"
+Repository = "https://github.com/EvolvingLMMs-Lab/lmms-eval"

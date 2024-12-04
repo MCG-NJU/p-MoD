@@ -1,0 +1,48 @@
+# Python
+__pycache__
+*.pyc
+*.egg-info
+dist
+
+# Log
+*.log
+*.log.*
+*.json
+*.jsonl
+
+# Data
+!**/alpaca-data-conversation.json
+
+# Editor
+.idea
+*.swp
+
+# Other
+.DS_Store
+wandb
+output
+
+checkpoints
+ckpts*
+
+.ipynb_checkpoints
+# *.ipynb
+
+# DevContainer
+!.devcontainer/*
+
+# Demo
+serve_images/
+
+# Ignore training and evaluation data
+playground/data/*
+!playground/data/coco2014_val_qa_eval
+!playground/data/prompts
+!playground/data/coco2014_val_gpt4_qa_30x3.jsonl
+
+# VSCode jsons
+#!.vscode/launch.json
+#!.vscode/settings.json
+
+# deepspeed zero{1,2,3}.json config files
+!scripts/*.json
