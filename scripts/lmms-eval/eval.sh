@@ -21,7 +21,7 @@ eval_tasks_list=(
 
 # Default values for keyword arguments
 eval_tasks=$(IFS=,; echo "${eval_tasks_list[*]}")
-ckpt="JungleGym/p-MoD-LLaVA-NeXT-7B"
+ckpt="MCG-NJU/p-MoD-LLaVA-NeXT-7B"
 conv_template="vicuna_v1"
 GPUS=`nvidia-smi -L | wc -l` #count all GPUs
 master_port=12345

@@ -39,15 +39,15 @@ wandb login
 ## :tiger: Model Zoo
 | Model                                                                       | LLM       | Epoch | Pretrain Data | SFT Data |
 | --------------------------------------------------------------------------- | --------- | ----- | ------------- | -------- |
-| [p-MoD-LLaVA-NeXT-7B](https://huggingface.co/JungleGym/p-MoD-LLaVA-NeXT-7B) | Vicuna-7B | 1     | 558K          | 779K     |
-| [p-MoD-LLaVA-v1.5-7B](https://huggingface.co/JungleGym/p-MoD-LLaVA-v1.5-7B) | Vicuna-7B | 1     | 558K          | 665K     |
+| [p-MoD-LLaVA-NeXT-7B](https://huggingface.co/MCG-NJU/p-MoD-LLaVA-NeXT-7B) | Vicuna-7B | 1     | 558K          | 779K     |
+| [p-MoD-LLaVA-v1.5-7B](https://huggingface.co/MCG-NJU/p-MoD-LLaVA-v1.5-7B) | Vicuna-7B | 1     | 558K          | 665K     |
 
 
 ## :bar_chart: Evaluation
 We evaluate our model using lmms-eval. You can use our script `./scripts/lmms-eval/eval.sh`, for example:
 ```Shell
 bash ./scripts/lmms-eval/eval.sh \
-  --ckpt JungleGym/p-MoD-LLaVA-NeXT-7B \
+  --ckpt MCG-NJU/p-MoD-LLaVA-NeXT-7B \
   --eval_tasks ai2d,chartqa \
   --project_name pmod \
   --run_name pmod-llava-next-7b-ft
