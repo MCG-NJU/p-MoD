@@ -53,6 +53,13 @@ bash ./scripts/lmms-eval/eval.sh \
   --run_name pmod-llava-next-7b-ft
 ```
 
+## :bar_chart: Performance
+![teaser](img/table1.png)
+
+![teaser](img/table2.png)
+**$p-MoD$** matches or even surpasses the performance of the baseline models, with only 55.6% TFLOPs and 53.8% KV cache storage during inference, and 77.7% GPU hours during training.
+
+
 ## :rocket: Train
 ### Pretraining
 We use the pretrained MLP projector provided by [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md), which can be downloaded [here](https://huggingface.co/liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicuna-7b-v1.5). Then put the downloaded model weights under `./checkpoints/llava-v1.5-7b-pretrain/llava-official-checkpoint`.
