@@ -7,6 +7,12 @@
 
 ![teaser](img/p-mod.png)
 
+**p-MoD** matches or even surpasses the performance of the baseline models, with only 55.6% TFLOPs and 53.8% KV cache storage during inference, and 77.7% GPU hours during training.
+
+![teaser](img/table1.png)
+
+![teaser](img/table2.png)
+
 ## :hammer_and_wrench: Requirements and Installation
 
 1. Clone this repository and navigate to the folder
@@ -52,13 +58,6 @@ bash ./scripts/lmms-eval/eval.sh \
   --project_name pmod \
   --run_name pmod-llava-next-7b-ft
 ```
-
-## :bar_chart: Performance
-![teaser](img/table1.png)
-
-![teaser](img/table2.png)
-**$p-MoD$** matches or even surpasses the performance of the baseline models, with only 55.6% TFLOPs and 53.8% KV cache storage during inference, and 77.7% GPU hours during training.
-
 
 ## :rocket: Train
 ### Pretraining
