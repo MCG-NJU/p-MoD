@@ -2,7 +2,7 @@
 
 [Jun Zhang](https://home.j-zh.top/), [Desen Meng](https://github.com/Kerin637), Ji Qi, Zhenpeng Huang, Tao Wu, and [Limin Wang](https://scholar.google.com/citations?user=HEuN8PcAAAAJ).
 
-[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg)](https://arxiv.org/abs/1234.56789)
+[![arXiv](https://img.shields.io/badge/arXiv-2412.04449-b31b1b.svg)](https://arxiv.org/abs/2412.04449)
 [![model](https://img.shields.io/badge/huggingface-model-blue.svg?logo=huggingface)](https://huggingface.co/collections/JungleGym/p-mod-67506ac52553d194c55782df)
 
 ![teaser](img/p-mod.png)
