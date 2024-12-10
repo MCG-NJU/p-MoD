@@ -87,8 +87,8 @@ Start training with `./scripts/train/finetune_eval_7b_pmod_llava_1_5.sh`.
 
 ## :page_facing_up: Citation
 If you find our work helpful for your research and applications, please cite our paper:
-```
-@article{zhang2024p,
+```Bibtex
+@article{zhang2024pmod,
   title={p-MoD: Building Mixture-of-Depths MLLMs via Progressive Ratio Decay},
   author={Zhang, Jun and Meng, Desen and Qi, Ji and Huang, Zhenpeng and Wu, Tao and Wang, Limin},
   journal={arXiv preprint arXiv:2412.04449},
