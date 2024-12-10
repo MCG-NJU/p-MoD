@@ -7,6 +7,11 @@
 
 ![teaser](img/p-mod.png)
 
+We present **p-MoD**, a series of efficient MLLMs which features:
+- :scissors: **Mixture-of-Depths** mechanism, upgraded with tanh-gated weight normalization (TanhNorm) and symmetric token reweighting (STRing).
+- :roller_coaster: **Progressive ratio decay (PRD)** strategy, which gradually reduces the token retention ratio layer by layer.
+
+## :closed_book: Performance and Efficiency
 **p-MoD** matches or even surpasses the performance of the baseline models, with only 55.6% TFLOPs and 53.8% KV cache storage during inference, and 77.7% GPU hours during training.
 
 ![teaser](img/table1.png)
@@ -81,7 +86,15 @@ python util_scripts/clean_data_json.py \
 Start training with `./scripts/train/finetune_eval_7b_pmod_llava_1_5.sh`.
 
 ## :page_facing_up: Citation
-TBD
+If you find our work helpful for your research and applications, please cite our paper:
+```
+@article{zhang2024p,
+  title={p-MoD: Building Mixture-of-Depths MLLMs via Progressive Ratio Decay},
+  author={Zhang, Jun and Meng, Desen and Qi, Ji and Huang, Zhenpeng and Wu, Tao and Wang, Limin},
+  journal={arXiv preprint arXiv:2412.04449},
+  year={2024}
+}
+```
 
 ## :dizzy: Acknowledgement
 - [LLaVA](https://github.com/haotian-liu/LLaVA) and [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT): The codebases we built upon.
