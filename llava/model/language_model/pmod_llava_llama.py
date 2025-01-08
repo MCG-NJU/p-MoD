@@ -545,7 +545,7 @@ class ModLayer(nn.Module):
             src = top_k_mask # mask values since we take different top_k values for each row
         )
 
-        logger.info(f"-------layer_index:{self.decoder_layer.self_attn.layer_idx}, total tokens:{mod_target_lengths}, kept tokens:{kept_mod_target_tokens_mask.sum(dim=1).int()}, kept_ratio: {kept_mod_target_tokens_mask.sum(dim=1).int()/mod_target_lengths}-----------------")
+        #logger.info(f"-------layer_index:{self.decoder_layer.self_attn.layer_idx}, total tokens:{mod_target_lengths}, kept tokens:{kept_mod_target_tokens_mask.sum(dim=1).int()}, kept_ratio: {kept_mod_target_tokens_mask.sum(dim=1).int()/mod_target_lengths}-----------------")
 
         # mask for all kept tokens, including target tokens for MoD and non-target tokens
         kept_tokens_mask = kept_mod_target_tokens_mask.clone() # [batch_size, seq_length]

@@ -55,7 +55,7 @@ wandb login
 
 
 ## :bar_chart: Evaluation
-We evaluate our model using lmms-eval. You can use our script `./scripts/lmms-eval/eval.sh`, for example:
+We evaluate our model using lmms-eval. You can use our script [./scripts/lmms-eval/eval.sh](./scripts/lmms-eval/eval.sh), for example:
 ```Shell
 bash ./scripts/lmms-eval/eval.sh \
   --ckpt MCG-NJU/p-MoD-LLaVA-NeXT-7B \
@@ -69,9 +69,9 @@ bash ./scripts/lmms-eval/eval.sh \
 We use the pretrained MLP projector provided by [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md), which can be downloaded [here](https://huggingface.co/liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicuna-7b-v1.5). Then put the downloaded model weights under `./checkpoints/llava-v1.5-7b-pretrain/llava-official-checkpoint`.
 
 ### p-MoD-LLaVA-NeXT
-First, we provide our script `./util_scripts/download_llava-next_data.py` for data preparation. This script downloads the [779K LLaVA-NeXT data](https://huggingface.co/datasets/lmms-lab/LLaVA-NeXT-Data), saves the images under `./playground/data/llava_next_images/` and data json to the path `./playground/data/llava_next_data.json`.
+First, we provide our python script [./util_scripts/download_llava-next_data.py](./util_scripts/download_llava-next_data.py) for data preparation. This script downloads the [779K LLaVA-NeXT data](https://huggingface.co/datasets/lmms-lab/LLaVA-NeXT-Data), saves the images under `./playground/data/llava_next_images/` and data json to the path `./playground/data/llava_next_data.json`.
 
-Then you can start training using `./scripts/train/finetune_eval_7b_pmod_llava_next.sh`.
+Then you can start training using [./scripts/train/finetune_eval_7b_pmod_llava_next.sh](./scripts/train/finetune_eval_7b_pmod_llava_next.sh).
 
 ### p-MoD-LLaVA-1.5
 First, prepare instruction tuning data following [LLaVA-1.5](https://github.com/haotian-liu/LLaVA#visual-instruction-tuning). Download the images from constituting datasets, and the dataset annotation json [llava_v1_5_mix_665k.json](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_v1_5_mix665k.json). Save the images and the json under `./playground/data`.
@@ -80,10 +80,10 @@ Then, we fix some broken examples in the data json by running the script
 ```Shell
 python util_scripts/clean_data_json.py \
 --original_json_path ./playground/data/llava_v1_5_mix665k.json \
---cleaned_json_path ././playground/data/llava_v1_5_mix665k_cleaned.json
+--cleaned_json_path ./playground/data/llava_v1_5_mix665k_cleaned.json
 ```
 
-Start training with `./scripts/train/finetune_eval_7b_pmod_llava_1_5.sh`.
+Start training with [./scripts/train/finetune_eval_7b_pmod_llava_1_5.sh](./scripts/train/finetune_eval_7b_pmod_llava_1_5.sh).
 
 ## :page_facing_up: Citation
 If you find our work helpful for your research and applications, please cite our paper:
