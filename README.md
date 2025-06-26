@@ -1,6 +1,6 @@
-# p-MoD: Building Mixture-of-Depths MLLMs via Progressive Ratio Decay
+# [ICCV 2025] p-MoD: Building Mixture-of-Depths MLLMs via Progressive Ratio Decay
 
-[Jun Zhang](https://home.j-zh.top/), [Desen Meng](https://github.com/Kerin637), Ji Qi, Zhenpeng Huang, Tao Wu, and [Limin Wang](https://scholar.google.com/citations?user=HEuN8PcAAAAJ).
+[Jun Zhang](https://home.j-zh.top/), [Desen Meng](https://github.com/Kerin637), Zhengming Zhang, Zhenpeng Huang, Tao Wu, and [Limin Wang](https://scholar.google.com/citations?user=HEuN8PcAAAAJ).
 
 [![arXiv](https://img.shields.io/badge/arXiv-2412.04449-b31b1b.svg)](https://arxiv.org/abs/2412.04449)
 [![model](https://img.shields.io/badge/huggingface-model-blue.svg?logo=huggingface)](https://huggingface.co/collections/JungleGym/p-mod-67506ac52553d194c55782df)
@@ -10,6 +10,10 @@
 We present **p-MoD**, a series of efficient MLLMs which features:
 - :scissors: **Mixture-of-Depths** mechanism, upgraded with tanh-gated weight normalization (TanhNorm) and symmetric token reweighting (STRing).
 - :roller_coaster: **Progressive ratio decay (PRD)** strategy, which gradually reduces the token retention ratio layer by layer.
+
+## :fire: News
+
+- <span style="font-variant-numeric: tabular-nums;">**2025.06.26**</span>: Our paper is accepted by ICCV 2025 :tada: :tada:!
 
 ## :closed_book: Performance and Efficiency
 **p-MoD** matches or even surpasses the performance of the baseline models, with only 55.6% TFLOPs and 53.8% KV cache storage during inference, and 77.7% GPU hours during training.
