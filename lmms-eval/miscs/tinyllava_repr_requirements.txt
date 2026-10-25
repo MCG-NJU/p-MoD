@@ -12,7 +12,8 @@ openpyxl
 packaging==23.2
 pandas==2.2.1
 peft==0.10.0
-Pillow==10.2.0
+# Pillow 13 requires Python >=3.11.
+Pillow==13.0.0
 protobuf==4.25.3
 pycocoevalcap==1.2
 pycocotools==2.0.7
